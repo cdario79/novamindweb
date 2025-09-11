@@ -235,23 +235,82 @@ h1, h2, h3, h4, h5, h6{
     fill: var(--primary);
  }
 .nav{
-    display:none
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--card);
+    border-top:1px solid var(--border);
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    z-index:40
+}
+.menu-toggle:checked ~ .nav{
+    display:block
 }
 .nav ul{
     display:flex;
+    flex-direction:column;
     list-style:none;
-    align-items:center;
-    gap:1.5rem
+    align-items:stretch;
+    gap:0;
+    margin:0;
+    padding:1rem 0
+}
+.nav li{
+    margin:0
 }
 .nav a{
-    display:inline-block;
-    padding:.5rem 0
+    display:block;
+    padding:1rem 1.5rem;
+    border-bottom:1px solid var(--border)
 }
 .nav a:hover{
-    color:var(--accent)
+    color:var(--accent);
+    background:rgba(37,99,235,0.05)
+}
+.nav li:last-child a{
+    border-bottom:none
 }
 .nav a.active{
     color:var(--primary);
+}
+
+/* =========================
+   HAMBURGER BUTTON & MENU TOGGLE
+   ========================= */
+.menu-toggle{
+    display:none
+}
+.hamburger-btn{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:44px;
+    height:44px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:0;
+    z-index:50
+}
+.hamburger-line{
+    width:22px;
+    height:2px;
+    background:var(--fg);
+    margin:2px 0;
+    transition:all 0.3s ease;
+    border-radius:1px
+}
+.menu-toggle:checked + .hamburger-btn .hamburger-line:nth-child(1){
+    transform:rotate(45deg) translate(5px, 5px)
+}
+.menu-toggle:checked + .hamburger-btn .hamburger-line:nth-child(2){
+    opacity:0
+}
+.menu-toggle:checked + .hamburger-btn .hamburger-line:nth-child(3){
+    transform:rotate(-45deg) translate(7px, -6px)
 }
 
 /* =========================
@@ -354,8 +413,28 @@ h1, h2, h3, h4, h5, h6{
     .header-bar{
         display:block
     }
+    .hamburger-btn{
+        display:none
+    }
     .nav{
-        display:block
+        display:block !important;
+        position:static;
+        background:transparent;
+        border:none;
+        box-shadow:none
+    }
+    .nav ul{
+        flex-direction:row;
+        align-items:center;
+        gap:1.5rem;
+        padding:0
+    }
+    .nav a{
+        padding:.5rem 0;
+        border:none
+    }
+    .nav a:hover{
+        background:transparent
     }
     .container{padding:0 1.5rem}
 }
