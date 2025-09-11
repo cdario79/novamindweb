@@ -5,7 +5,16 @@
 - Le icone SVG le ho chieste a ChatGPT 5.0, che mi ha aiutato a crearle in modo semplice.
 
 ### Dove ho preso le imamgini
-- Le immagini le ho scaricate da https://www.pexels.com/it-it/ e le ho modificate in modo da rispettare le dimensioni del layout.
+- Le immagini le ho scaricate da https://www.pexels.com/it-it/ e le ho modificate con GIMP in modo da rispettare le dimensioni del layout.
+- Licenza per le immagini: https://www.pexels.com/it-it/license/
+
+### Dove ho preso il testo
+- Il testo parte da una mia idea buttata giù come bozza e poi l'ho rielaborato e adattato con ChatGPT 5.0.
+
+### Strumenti utilizzati
+- https://www.freeformatter.com/html-formatter.html
+- https://validator.w3.org/
+- https://www.skynettechnologies.com/accessibility-checker
 
 ## Uso di npm e live-server
 
