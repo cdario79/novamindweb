@@ -579,16 +579,26 @@ img {
     background: transparent;
     color: var(--text-secondary);
     border: 2px solid var(--border);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-ghost:hover {
     border-color: var(--primary);
     color: var(--primary);
     background: rgba(37, 99, 235, 0.05);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .btn-ghost:active {
     border-color: var(--primary-dark);
+    opacity: 0.85;
+    transform: translateY(0);
+}
+
+.btn-ghost:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
 }
 
 .btn-sm {
