@@ -9,6 +9,11 @@
     --secondary: #10b981;
     --accent: #0ea5e9;
 
+    /* Colori arancioni */
+    --orange: #ea580c;
+    --orange-dark: #c2410c;
+    --orange-light: #fb923c;
+
     /* Testi */
     --fg: #1e293b;
     --text-primary: #1f2937;
@@ -35,6 +40,7 @@
 
     /* Gradienti */
     --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    --gradient-orange: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
     --gradient-hero: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 100%);
     --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
 }
@@ -138,6 +144,7 @@ img {
 
 .hero-payoff {
     font-size: 1.25rem;
+    font-weight: bold;
     color: var(--text-secondary);
     margin-bottom: 1rem;
     animation: fadeInUp 0.8s ease-out 0.2s both;
@@ -544,6 +551,28 @@ img {
 .btn-primary:active {
     opacity: 0.85;
     transform: translateY(0);
+}
+
+.btn-orange {
+    background: var(--gradient-orange);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.btn-orange:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--orange-dark) 0%, var(--orange) 100%);
+}
+
+.btn-orange:active {
+    opacity: 0.85;
+    transform: translateY(0);
+}
+
+.btn-orange:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
 }
 
 .btn-ghost {
