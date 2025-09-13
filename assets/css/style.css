@@ -380,14 +380,16 @@ img {
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--card);
-    border-top: 1px solid var(--border);
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 0 0 12px 12px;
     box-shadow: var(--shadow-lg);
     z-index: 40;
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .menu-toggle:checked ~ .nav {
@@ -404,7 +406,6 @@ img {
     align-items: stretch;
     gap: 0;
     margin: 0;
-    padding: 0;
 }
 
 .nav li {
@@ -414,22 +415,41 @@ img {
 .nav a {
     display: block;
     padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--border);
-    color: var(--text-white);
+    color: var(--text-secondary);
     font-weight: 500;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
+    position: relative;
+    border-left: 3px solid transparent;
 }
 
-.nav a:hover{
+.nav a:hover {
     color: var(--primary);
+    background: rgba(37, 99, 235, 0.05);
+    border-left-color: var(--primary);
 }
+
 .nav a.active {
     color: var(--primary);
-    background: var(--bg-alternate);
+    background: rgba(37, 99, 235, 0.1);
+    border-left-color: var(--primary);
+    font-weight: 600;
 }
 
-.nav li:last-child a {
-    border-bottom: none;
+.nav a.active::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.nav li:not(:last-child) a {
+    border-bottom: 1px solid var(--border-light);
 }
 
 /* =========================
@@ -951,12 +971,13 @@ img {
     .nav {
         display: block !important;
         position: static;
-        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        background: transparent;
         border: none;
         box-shadow: none;
         transform: none;
         opacity: 1;
         visibility: visible;
+        border-radius: 0;
     }
 
     .nav ul {
@@ -968,12 +989,26 @@ img {
 
     .nav a {
         padding: 0.5rem 1rem;
-        border: none;
+        border: none !important;
         border-radius: 8px;
+        color: var(--text-white);
+        background: transparent;
     }
 
     .nav a:hover {
-        background: rgba(37, 99, 235, 0.1);
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-white);
+        border-left-color: transparent !important;
+    }
+
+    .nav a.active {
+        background: rgba(255, 255, 255, 0.15);
+        color: var(--text-white);
+        border-left-color: transparent !important;
+    }
+
+    .nav a.active::after {
+        display: none;
     }
 
     .container {
