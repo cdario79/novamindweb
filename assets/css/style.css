@@ -16,6 +16,7 @@
     --muted: #64748b;
     --text-muted: #9ca3af;
     --on-primary: #ffffff;
+    --text-white: #ffffff;
 
     /* Sfondi */
     --bg: #f8fafc;
@@ -34,7 +35,7 @@
 
     /* Gradienti */
     --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-hero: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 100%);
     --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
 }
 
@@ -341,20 +342,13 @@ img {
     display: none;
 }
 
-.topbar {
-    font-size: 0.875rem;
-    padding: 0.5rem 1rem;
-}
-
 .sticky-header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     border-bottom: 1px solid var(--border);
     padding: 1rem 0;
-    padding-top: env(safe-area-inset-top);
     transition: all 0.3s ease;
 }
 
@@ -364,7 +358,7 @@ img {
     gap: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.02em;
-    color: var(--primary);
+    color: var(--text-white);
     font-size: clamp(1rem, 0.9rem + 0.4vw, 1.5rem);
     text-decoration: none;
 }
@@ -372,7 +366,7 @@ img {
 .brand .logo {
     width: 2em;
     height: 2em;
-    fill: var(--primary);
+    fill: var(--text-white);
     transition: transform 0.3s ease;
 }
 
@@ -421,15 +415,17 @@ img {
     display: block;
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--border);
-    color: var(--text-secondary);
+    color: var(--text-white);
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
-.nav a:hover,
+.nav a:hover{
+    color: var(--primary);
+}
 .nav a.active {
     color: var(--primary);
-    background: rgba(37, 99, 235, 0.1);
+    background: var(--bg-alternate);
 }
 
 .nav li:last-child a {
@@ -460,7 +456,7 @@ img {
 .hamburger-line {
     width: 22px;
     height: 2px;
-    background: var(--fg);
+    background: var(--text-white);
     margin: 2px 0;
     transition: all 0.3s ease;
     border-radius: 1px;
@@ -955,7 +951,7 @@ img {
     .nav {
         display: block !important;
         position: static;
-        background: transparent;
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
         border: none;
         box-shadow: none;
         transform: none;
