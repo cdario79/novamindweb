@@ -1046,18 +1046,6 @@ img {
     .container {
         padding: 0 1.25rem;
     }
-
-    .hero-buttons {
-        flex-direction: row;
-        gap: 1rem;
-        justify-content: center;
-        max-width: none;
-    }
-
-    .hero-buttons .btn {
-        width: auto;
-        max-width: none;
-    }
 }
 
 /* ≥768px (md) */
@@ -1190,12 +1178,26 @@ img {
     }
 
     .hero-buttons {
+        align-items: flex-start;
         margin-top: 2.5rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
 /* ≥1200px (xl) */
 @media (min-width: 1200px) {
+    .hero-buttons {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: left;
+        max-width: none;
+    }
+
+    .hero-buttons .btn {
+        width: auto;
+        max-width: none;
+    }
     .hero-layout {
         gap: 5rem;
     }
