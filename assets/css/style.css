@@ -1748,3 +1748,56 @@ img {
         break-inside: avoid;
     }
 }
+
+/* FAQ (details/summary, senza JavaScript) - override e integrazione */
+.faq-container summary {
+    list-style: none;
+}
+.faq-container summary::-webkit-details-marker {
+    display: none;
+}
+/* Mantiene lo stile del summary e applica il padding richiesto */
+.faq-container summary.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+}
+/* Icona più grande e animata */
+.faq-container .faq-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+.faq-container details[open] .faq-icon {
+    transform: rotate(180deg);
+}
+
+/* Stato chiuso: nasconde la risposta e rimuove sfondo */
+.faq-container details > .faq-answer {
+    display: none;
+    margin-top: 0.5rem;
+    color: var(--muted, #6b7280);
+    line-height: 1.6;
+    background: transparent !important;
+    background-color: transparent !important;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+/* Stato aperto: mostra la risposta, senza sfondo grigio */
+.faq-container details[open] > .faq-answer {
+    display: block !important;
+    max-height: 100vh !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
