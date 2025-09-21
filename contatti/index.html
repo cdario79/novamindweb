@@ -42,8 +42,256 @@
          </div>
       </header>
       <main id="content">
-  
-         </main>
+         <!-- Hero Section Contatti -->
+         <section class="section">
+            <div class="container inner">
+               <div class="text-center">
+                  <h1 class="hero-title">Contattaci</h1>
+                  <p class="lead mx-auto">
+                     Siamo pronti ad ascoltare le tue esigenze e trovare insieme la soluzione migliore per far crescere il tuo business digitalmente.
+                  </p>
+               </div>
+            </div>
+         </section>
+
+         <!-- Sezione Contatti e Mappa -->
+         <section class="section bg-alternate">
+            <div class="container inner">
+               <div class="contact-layout">
+                  <!-- Modulo di Contatto -->
+                  <div class="contact-form-container">
+                     <div class="card">
+                        <div class="card-content">
+                           <h2 class="section-title text-left">Invia una richiesta</h2>
+                           <p class="section-sub text-left">Compila il modulo e ti contatteremo entro 24 ore</p>
+
+                           <form class="contact-form" method="post" action="#" novalidate>
+                              <div class="form-group">
+                                 <label for="nome">Nome *</label>
+                                 <input type="text" id="nome" name="nome" required 
+                                        minlength="2" maxlength="50"
+                                        pattern="[A-Za-zÀ-ÿ\s]+"
+                                        title="Inserisci solo lettere e spazi">
+                              </div>
+
+                              <div class="form-group">
+                                 <label for="cognome">Cognome *</label>
+                                 <input type="text" id="cognome" name="cognome" required 
+                                        minlength="2" maxlength="50"
+                                        pattern="[A-Za-zÀ-ÿ\s]+"
+                                        title="Inserisci solo lettere e spazi">
+                              </div>
+
+                              <div class="form-group">
+                                 <label for="email">Email *</label>
+                                 <input type="email" id="email" name="email" required 
+                                        maxlength="100"
+                                        title="Inserisci un indirizzo email valido">
+                              </div>
+
+                              <div class="form-group">
+                                 <label for="telefono">Telefono</label>
+                                 <input type="tel" id="telefono" name="telefono" 
+                                        pattern="[0-9+\s\-\(\)]+"
+                                        maxlength="20"
+                                        title="Inserisci un numero di telefono valido">
+                              </div>
+
+                              <div class="form-group">
+                                 <label for="azienda">Azienda</label>
+                                 <input type="text" id="azienda" name="azienda" maxlength="100">
+                              </div>
+
+                              <div class="form-group">
+                                 <label for="servizio">Servizio di interesse</label>
+                                 <select id="servizio" name="servizio">
+                                    <option value="">Seleziona un servizio</option>
+                                    <option value="consulenza-digitale">Consulenza Digitale</option>
+                                    <option value="sviluppo-software">Sviluppo Software</option>
+                                    <option value="analytics">Analytics & Data</option>
+                                    <option value="automazione">Automazione Processi</option>
+                                    <option value="altro">Altro</option>
+                                 </select>
+                              </div>
+
+                              <div class="form-group">
+                                 <label for="messaggio">Messaggio *</label>
+                                 <textarea id="messaggio" name="messaggio" rows="5" required 
+                                           minlength="10" maxlength="1000"
+                                           placeholder="Descrivi il tuo progetto o le tue esigenze..."
+                                           title="Inserisci almeno 10 caratteri"></textarea>
+                              </div>
+
+                              <div class="form-group checkbox-group">
+                                 <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" required 
+                                           title="Devi accettare la Privacy Policy">
+                                    <span class="checkmark"></span>
+                                    Accetto la <a href="/privacy-policy" class="link">Privacy Policy</a> *
+                                 </label>
+                              </div>
+
+                              <div class="form-group checkbox-group">
+                                 <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Desidero ricevere aggiornamenti via email
+                                 </label>
+                              </div>
+
+                              <button type="submit" class="btn btn-primary">
+                                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                 </svg>
+                                 Invia Richiesta
+                              </button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Informazioni di Contatto e Mappa -->
+                  <div class="contact-info-container">
+                     <!-- Info di Contatto -->
+                     <div class="card contact-info-card">
+                        <div class="card-content">
+                           <h3>I nostri contatti</h3>
+
+                           <div class="contact-item">
+                              <div class="contact-icon">
+                                 <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                 </svg>
+                              </div>
+                              <div>
+                                 <h4>Indirizzo</h4>
+                                 <p>Via Roma 123<br>20121 Milano, Italia</p>
+                              </div>
+                           </div>
+
+                           <div class="contact-item">
+                              <div class="contact-icon">
+                                 <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                 </svg>
+                              </div>
+                              <div>
+                                 <h4>Telefono</h4>
+                                 <p><a href="tel:+390212345678">+39 02 1234 5678</a></p>
+                              </div>
+                           </div>
+
+                           <div class="contact-item">
+                              <div class="contact-icon">
+                                 <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                 </svg>
+                              </div>
+                              <div>
+                                 <h4>Email</h4>
+                                 <p><a href="mailto:info@novamind.tld">info@novamind.tld</a></p>
+                              </div>
+                           </div>
+
+                           <div class="contact-item">
+                              <div class="contact-icon">
+                                 <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                 </svg>
+                              </div>
+                              <div>
+                                 <h4>Orari di apertura</h4>
+                                 <p>Lun-Ven: 9:00 - 18:00<br>Sab: Su appuntamento</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Mappa -->
+                     <div class="card map-card">
+                        <div class="card-content">
+                           <h3>Dove siamo</h3>
+                           <div id="map" class="map-container">
+                              <iframe 
+                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.0280754114873!2d9.188540000000001!3d45.4654219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1493f1275e7%3A0x3cffcd13c6740e8d!2sVia%20Roma%2C%20123%2C%2020121%20Milano%20MI!5e0!3m2!1sit!2sit!4v1679234567890!5m2!1sit!2sit"
+                                 width="100%" 
+                                 height="300" 
+                                 style="border:0;" 
+                                 allowfullscreen="" 
+                                 loading="lazy" 
+                                 referrerpolicy="no-referrer-when-downgrade">
+                              </iframe>
+                           </div>
+                           <p class="map-description">
+                              Ci trovi nel centro di Milano, facilmente raggiungibile con i mezzi pubblici. La metropolitana Duomo (linee M1 e M3) dista solo 5 minuti a piedi.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Sezione FAQ -->
+         <section class="section">
+            <div class="container inner">
+               <div class="text-center mb-12">
+                  <h2 class="section-title">Domande Frequenti</h2>
+                  <p class="section-sub">Trova rapidamente le risposte che cerchi</p>
+               </div>
+
+               <div class="faq-container">
+                  <div class="faq-item">
+                     <button class="faq-question" data-faq="1">
+                        <span>Quanto tempo serve per avere una risposta?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                           <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                     </button>
+                     <div class="faq-answer" id="faq-1">
+                        <p>Rispondiamo a tutte le richieste entro 24 ore lavorative. Per progetti urgenti, contattateci direttamente al telefono.</p>
+                     </div>
+                  </div>
+
+                  <div class="faq-item">
+                     <button class="faq-question" data-faq="2">
+                        <span>Offrite consulenze gratuite?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                           <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                     </button>
+                     <div class="faq-answer" id="faq-2">
+                        <p>Sì, offriamo una consulenza iniziale gratuita di 30 minuti per valutare insieme le vostre esigenze e proporre la soluzione migliore.</p>
+                     </div>
+                  </div>
+
+                  <div class="faq-item">
+                     <button class="faq-question" data-faq="3">
+                        <span>Lavorate solo con aziende di Milano?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                           <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                     </button>
+                     <div class="faq-answer" id="faq-3">
+                        <p>No, lavoriamo con aziende in tutta Italia e anche all'estero. Molti dei nostri servizi possono essere erogati completamente in remoto.</p>
+                     </div>
+                  </div>
+
+                  <div class="faq-item">
+                     <button class="faq-question" data-faq="4">
+                        <span>Quali settori seguite principalmente?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                           <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                     </button>
+                     <div class="faq-answer" id="faq-4">
+                        <p>Lavoriamo principalmente con PMI in settori come e-commerce, servizi professionali, manifatturiero e startup tecnologiche, ma siamo aperti a nuove sfide.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
       <footer class="footer">
          <div class="container inner">
             <div class="footer-grid">
