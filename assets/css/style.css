@@ -685,6 +685,31 @@ img {
     transition: all 0.3s ease;
 }
 
+/* Mostra il cursore “mano” solo quando la card ha il link overlay */
+.card:has(.card-link) {
+    cursor: pointer;
+}
+
+/* Make entire card clickable via overlay link */
+.card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    text-indent: -9999px; /* hide accessible text label if present */
+}
+
+/* Keep inner content above the overlay for interactive elements */
+.card:has(.card-link) * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Keyboard focus ring when the overlay link is focused */
+.card-link:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
 .card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
