@@ -730,6 +730,70 @@ img {
     padding: 2rem 1.5rem;
 }
 
+/* =========================
+   TEAM CARD TYPOGRAPHY
+   (solo card del team, layout centrato)
+   ========================= */
+.card.text-center .card-content {
+    padding: 20px 24px 24px; /* più respiro rispetto ai post */
+}
+
+.card.text-center .card-content .meta {
+    margin-top: 4px;
+    margin-bottom: 10px; /* distanzia il ruolo dal titolo */
+}
+
+.card.text-center h3 {
+    margin: 8px 0 6px;   /* non schiacciato sul ruolo */
+    line-height: 1.25;
+}
+
+.card.text-center .card-content p {
+    max-width: 60ch;       /* larghezza ottimale per lettura */
+    margin-left: auto;
+    margin-right: auto;     /* centra il testo nella card */
+    line-height: 1.7;       /* + leggibilità */
+    letter-spacing: 0.005em;/* micro-tracking per corpi piccoli */
+}
+
+/* separatore delicato tra immagine e contenuto */
+
+.card.text-center .card-header + .card-content {
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================
+   TEAM CARD IMAGE (quadrata)
+   ========================= */
+.card.text-center .card-header img {
+    width: 100%;
+    aspect-ratio: 1 / 1;     /* rende l'immagine perfettamente quadrata */
+    object-fit: cover;        /* ritaglio proporzionato */
+    border-radius: 0;         /* nessun arrotondamento sul bordo superiore */
+    transition: transform 0.3s ease;
+}
+
+.card.text-center:hover .card-header img {
+    transform: scale(1.05);   /* effetto leggero al passaggio del mouse */
+}
+
+/* =========================
+   TEAM CARD IMAGE (quadrata su tablet/desktop)
+   ========================= */
+@media (min-width: 768px) {
+  .card.text-center .card-header img {
+    height: auto;           /* override dell'altezza fissa globale */
+    aspect-ratio: 1 / 1;    /* rende l'immagine quadrata */
+    object-fit: cover;      /* ritaglio proporzionato */
+  }
+
+  /* Effetto hover più delicato per i ritratti del team */
+  .card.text-center:hover .card-header img {
+    transform: scale(1.05); /* override rispetto alla regola generica */
+  }
+}
+
 .card-simple {
     border: 1px solid var(--border);
     border-radius: 16px;
