@@ -929,6 +929,8 @@ a.card {
 /* Liste più leggibili */
 .article-content ul { padding-left: 1.25rem; margin-top: 0.5rem; }
 .article-content ul li { margin: 0.35rem 0; }
+.article-content ol { padding-left: 1.25rem; margin-top: 0.5rem; }
+.article-content ol li { margin: 0.35rem 0; }
 
 /* Tabelle coerenti con il tema (override di eventuali inline) */
 .article-content table { width: 100% !important; border-collapse: collapse !important; margin: 1.25rem 0 !important; box-shadow: var(--shadow-sm); border-radius: 12px; overflow: hidden; }
@@ -2002,7 +2004,6 @@ a.card {
     margin-top: 0.5rem;
     color: var(--muted, #6b7280);
     line-height: 1.6;
-    background: transparent !important;
     background-color: transparent !important;
     max-height: 0;
     overflow: hidden;
@@ -2018,6 +2019,5 @@ a.card {
     overflow: visible !important;
     opacity: 1 !important;
     visibility: visible !important;
-    background: transparent !important;
     background-color: transparent !important;
 }
