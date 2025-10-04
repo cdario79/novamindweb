@@ -2,10 +2,12 @@
   "name": "novamind",
   "version": "1.0.0",
   "scripts": {
-    "start": "live-server --port=3000 --open=/index.html"
+    "start": "live-server --port=3000 --open=/index.html",
+    "resize": "node resize.js"
   },
   "author": "Dario Colombo",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "sharp": "^0.34.4"
   }
 }
