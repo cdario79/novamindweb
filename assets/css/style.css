@@ -690,18 +690,25 @@ img {
     cursor: pointer;
 }
 
+/* Clickable cards rendered directly as <a class="card"> */
+a.card {
+    display: block;
+    cursor: pointer;
+}
+
 /* Make entire card clickable via overlay link */
 .card-link {
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: 3;
     text-indent: -9999px; /* hide accessible text label if present */
+    pointer-events: auto;
 }
 
-/* Keep inner content above the overlay for interactive elements */
-.card:has(.card-link) * {
+/* Keep inner content positioned without covering the overlay */
+.card:has(.card-link) *:not(.card-link) {
     position: relative;
-    z-index: 2;
+    z-index: 0;
 }
 
 /* Keyboard focus ring when the overlay link is focused */
@@ -1728,6 +1735,7 @@ img {
 .faq-question:focus {
     outline: 2px solid var(--primary);
     outline-offset: -2px;
+    border-radius: 12px;
 }
 
 .faq-icon {
