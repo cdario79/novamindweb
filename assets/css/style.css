@@ -832,6 +832,129 @@ a.card {
 }
 
 /* =========================
+   BLOG ARTICLE STYLES
+   ========================= */
+.article-header {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+}
+
+/* Pulsante Torna al blog */
+.back-to-blog {
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-right: auto;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.back-to-blog:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: rgba(37, 99, 235, 0.05);
+}
+
+/* Allinea a sinistra anche se l’header è centrato */
+.article-header.text-center .back-to-blog {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0 0 1rem 1rem;
+}
+
+.article-header {
+    position: relative;
+}
+
+/* Centra l'header dell'articolo e ottimizza il lead */
+.article-header.text-center { text-align: center; }
+.article-header .lead { max-width: 60ch; margin-left: auto; margin-right: auto; color: var(--text-secondary); }
+
+/* Titolo articolo: grande, azzurro, senza effetto gradiente */
+.article-title {
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    font-size: clamp(2rem, 1.2rem + 3vw, 3.25rem);
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Breadcrumb e meta */
+.breadcrumb {
+    color: var(--text-secondary);
+}
+.breadcrumb a {
+    color: var(--primary);
+}
+
+.article-header .meta {
+    color: var(--text-secondary);
+}
+
+/* Immagine di copertina dell'articolo */
+.article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    margin-top: 1rem;
+    max-height: 320px; /* riduce l’altezza per vedere più testo */
+    object-fit: cover; /* mantiene proporzioni */
+}
+
+/* Corpo dell'articolo: larghezza di lettura ottimale */
+.article-content {
+    max-width: 72ch;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+.article-content ul { list-style: disc; }
+.article-content ol { list-style: decimal; }
+.article-content li { margin: 0.35rem 0; }
+.article-content h2 + p { margin-top: 0.5rem; }
+
+/* Spaziatura verticale uniforme tra i blocchi */
+.article-content > * + * { margin-top: 1rem; }
+.article-content h2 { margin-top: 2rem; font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2rem); }
+.article-content h3 { margin-top: 1.25rem; font-size: clamp(1.125rem, 1rem + 0.6vw, 1.35rem); }
+.article-content p  { line-height: 1.8; color: var(--text-primary); }
+
+/* Liste più leggibili */
+.article-content ul { padding-left: 1.25rem; margin-top: 0.5rem; }
+.article-content ul li { margin: 0.35rem 0; }
+
+/* Tabelle coerenti con il tema (override di eventuali inline) */
+.article-content table { width: 100% !important; border-collapse: collapse !important; margin: 1.25rem 0 !important; box-shadow: var(--shadow-sm); border-radius: 12px; overflow: hidden; }
+.article-content th, .article-content td { padding: 0.85rem !important; border: 1px solid var(--border) !important; text-align: left; }
+.article-content tr:nth-child(even) { background: #f8fafc; }
+
+/* Tabelle responsive */
+.article-content table { display: table; width: 100% !important; }
+.article-content table thead th { background: #f8fafc; }
+.article-content .table-wrap { overflow-x: auto; }
+
+/* Box CTA nell'articolo */
+.article-cta { border: 1px solid var(--border); border-radius: 16px; background: var(--bg-alternate); box-shadow: var(--shadow-sm); }
+.article-cta h3 { margin-top: 0; margin-bottom: 0.5rem; }
+.article-cta p  { margin: 0 0 1rem; }
+
+/* Utility minime usate nel markup dell'articolo */
+.rounded { border-radius: 12px; }
+.p-6 { padding: 1.5rem; }
+.bg-alternate { background: var(--bg-alternate); }
+.max-w-4xl { max-width: 56rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+
+/* =========================
    SERVICE CARDS
    ========================= */
 .service-card {
