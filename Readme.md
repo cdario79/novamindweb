@@ -8,6 +8,7 @@
 - Le immagini le ho scaricate da https://www.pexels.com/it-it/ e le ho modificate con GIMP in modo da rispettare le dimensioni del layout.
 - Licenza per le immagini: https://www.pexels.com/it-it/license/
 - https://www.freepik.com/
+- https://www.vecteezy.com/  ATTIBUTION REQUIRED:  <a href="https://www.vecteezy.com/free-photos/web-analytics">Web Analytics Stock photos by Vecteezy</a>
 
 ### Dove ho preso il testo
 - Il testo parte da una mia idea buttata giù come bozza e poi l'ho rielaborato e adattato con ChatGPT 5.0.
