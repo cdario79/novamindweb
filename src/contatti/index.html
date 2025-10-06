@@ -5,13 +5,14 @@
       <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
       <title>NovaMind Consulting | Acceleriamo la trasformazione digitale</title>
       <meta name="description" content="Soluzioni su misura per PMI che vogliono crescere con tecnologia, dati e automazione.">
-      <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
-      <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
-      <link rel="shortcut icon" href="/favicon/favicon.ico">
-      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" href="/assets/favicon/assets/favicon-96x96.png" sizes="96x96">
+      <link rel="icon" type="image/svg+xml" href="/assets/favicon/assets/favicon.svg">
+      <link rel="shortcut icon" href="/assets/favicon/assets/favicon.ico">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
       <meta name="apple-mobile-web-app-title" content="NovaMind">
-      <link rel="manifest" href="/favicon/site.webmanifest">
-      <link rel="stylesheet" href="/assets/css/style.css">
+      <link rel="manifest" href="/assets/favicon/site.webmanifest">
+      <link rel="preload" href="/assets/css/style.css" as="style">
+   <link rel="stylesheet" href="/assets/css/style.css">
    </head>
    <body>
       <header class="sticky-header">
@@ -212,15 +213,36 @@
                         <div class="card-content">
                            <h3>Dove siamo</h3>
                            <div id="map" class="map-container">
-                              <iframe 
-                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.0280754114873!2d9.188540000000001!3d45.4654219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1493f1275e7%3A0x3cffcd13c6740e8d!2sVia%20Roma%2C%20123%2C%2020121%20Milano%20MI!5e0!3m2!1sit!2sit!4v1679234567890!5m2!1sit!2sit"
-                                 width="100%" 
-                                 height="300" 
-                                 style="border:0;" 
-                                 allowfullscreen="" 
-                                 loading="lazy" 
-                                 referrerpolicy="no-referrer-when-downgrade">
-                              </iframe>
+                            <picture>
+                          <source type="image/avif"
+                                  srcset="/assets/images/mappa-360.avif 360w,
+                                    /assets/images/mappa-504.avif 504w,
+                                    /assets/images/mappa-720.avif 720w,
+                                    /assets/images/mappa-960.avif 960w,
+                                    /assets/images/mappa-1024.avif 1024w,
+                                    /assets/images/mappa-1200.avif 1200w">
+                          <source type="image/webp"
+                                  srcset="/assets/images/mappa-360.webp 360w,
+                                    /assets/images/mappa-504.webp 504w,
+                                    /assets/images/mappa-720.webp 720w,
+                                    /assets/images/mappa-960.webp 960w,
+                                    /assets/images/mappa-1024.webp 1024w,
+                                    /assets/images/mappa-1200.webp 1200w">
+                          <img
+                                  src="/assets/images/mappa-504.jpg"
+                                  srcset="/assets/images/mappa-360.jpg 360w,
+                                    /assets/images/mappa-504.jpg 504w,
+                                    /assets/images/mappa-720.jpg 720w,
+                                    /assets/images/mappa-960.jpg 960w,
+                                    /assets/images/mappa-1024.jpg 1024w,
+                                    /assets/images/mappa-1200.jpg 1200w"
+                                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 504px"
+                                  width="1280"
+                                  height="960"
+                                  alt="Mappa della nostra sede"
+                                  loading="eager"
+                                  fetchpriority="high">
+                        </picture>
                            </div>
                            <p class="map-description">
                               Ci trovi nel centro di Milano, facilmente raggiungibile con i mezzi pubblici. La metropolitana Duomo (linee M1 e M3) dista solo 5 minuti a piedi.

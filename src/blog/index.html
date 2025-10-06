@@ -5,13 +5,19 @@
       <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
       <title>NovaMind Consulting | Acceleriamo la trasformazione digitale</title>
       <meta name="description" content="Soluzioni su misura per PMI che vogliono crescere con tecnologia, dati e automazione.">
-      <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
-      <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
-      <link rel="shortcut icon" href="/favicon/favicon.ico">
-      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" href="/assets/favicon/assets/favicon-96x96.png" sizes="96x96">
+      <link rel="icon" type="image/svg+xml" href="/assets/favicon/assets/favicon.svg">
+      <link rel="shortcut icon" href="/assets/favicon/assets/favicon.ico">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
       <meta name="apple-mobile-web-app-title" content="NovaMind">
-      <link rel="manifest" href="/favicon/site.webmanifest">
-      <link rel="stylesheet" href="/assets/css/style.css">
+      <link rel="manifest" href="/assets/favicon/site.webmanifest">
+      <link rel="preload" href="/assets/css/style.css" as="style">
+   <link rel="preload" href="/assets/css/style.css" as="style">
+   <link rel="preload" as="image" href="/assets/images/blog-cloud-960.avif" type="image/avif"
+         imagesrcset="/assets/images/blog-cloud-360.avif 360w, /assets/images/blog-cloud-504.avif 504w, /assets/images/blog-cloud-720.avif 720w, /assets/images/blog-cloud-960.avif 960w, /assets/images/blog-cloud-1200.avif 1200w"
+         imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 504px"
+         fetchpriority="high">
+   <link rel="stylesheet" href="/assets/css/style.css">
    </head>
    <body>
       <header class="sticky-header">
@@ -46,7 +52,7 @@
             <div class="container inner">
                <header class="text-center max-w-4xl mx-auto">
                   <h1 class="hero-title mb-6">Ultimi articoli dal blog</h1>
-                  <p class="lead mx-auto">Insights e approfondimenti sulla trasformazione digitale</p>
+                  <h2 class="lead mx-auto">Insights e approfondimenti sulla trasformazione digitale</h2>
                </header>
                <div class="mt-8 grid-3">
                   <a href="/blog/cloud-computing-pmi" class="card" aria-label="Cloud Computing per PMI: 5 vantaggi immediati">
@@ -75,7 +81,7 @@
                             width="400"
                             height="200"
                             alt="Cloud Computing per PMI"
-                            loading="lazy"
+                            fetchpriority="high"
                             decoding="async">
                         </picture>
                      </div>
@@ -528,7 +534,7 @@
                      <a target="_blank" href="https://linkedin.com/company/novamind"
                         class="text-muted hover:text-primary" aria-label="LinkedIn">
                         <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h30.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
                      </a>
                      <a  target="_blank" href="https://youtube.com/@novamind" class="text-muted hover:text-primary"
