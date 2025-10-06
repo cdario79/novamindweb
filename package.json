@@ -1,13 +1,30 @@
 {
-  "name": "novamind",
+  "name": "my-project",
   "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "live-server --port=3000 --open=/index.html",
-    "resize": "node resize.js"
+    "dev": "live-server src",
+    "clean": "del-cli dist",
+    "copy:html": "cpx \"src/**/*.*\" dist",
+    "minify:html": "node scripts/minify-html.mjs",
+    "minify:css": "cleancss -o dist/assets/css/style.css dist/assets/css/style.css && purgecss --css dist/assets/css/style.css --content \"dist/**/*.html\" --output dist/assets/css",
+    "optimize:img": "node scripts/optimize-images.js",
+    "build": "npm run clean && npm run copy:html && npm run minify:html && npm run minify:css",
+    "start": "node -e \"console.log('Cache bust:', Date.now())\" && http-server dist -c31536000"
   },
-  "author": "Dario Colombo",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.2",
+    "clean-css-cli": "^5.6.3",
+    "cpx": "^1.2.1",
+    "del-cli": "^5.0.0",
+    "html-minifier": "^4.0.0",
+    "html-minifier-terser": "^7.2.0",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.0",
+    "purgecss": "^7.0.2",
     "sharp": "^0.34.4"
   }
 }
