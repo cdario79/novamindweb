@@ -685,33 +685,28 @@ img {
     transition: all 0.3s ease;
 }
 
-/* Mostra il cursore “mano” solo quando la card ha il link overlay */
 .card:has(.card-link) {
     cursor: pointer;
 }
 
-/* Clickable cards rendered directly as <a class="card"> */
 a.card {
     display: block;
     cursor: pointer;
 }
 
-/* Make entire card clickable via overlay link */
 .card-link {
     position: absolute;
     inset: 0;
     z-index: 3;
-    text-indent: -9999px; /* hide accessible text label if present */
+    text-indent: -9999px;
     pointer-events: auto;
 }
 
-/* Keep inner content positioned without covering the overlay */
 .card:has(.card-link) *:not(.card-link) {
     position: relative;
     z-index: 0;
 }
 
-/* Keyboard focus ring when the overlay link is focused */
 .card-link:focus-visible {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
@@ -739,65 +734,60 @@ a.card {
 
 /* =========================
    TEAM CARD TYPOGRAPHY
-   (solo card del team, layout centrato)
    ========================= */
 .card.text-center .card-content {
-    padding: 20px 24px 24px; /* più respiro rispetto ai post */
+    padding: 20px 24px 24px;
 }
 
 .card.text-center .card-content .meta {
     margin-top: 4px;
-    margin-bottom: 10px; /* distanzia il ruolo dal titolo */
+    margin-bottom: 10px;
 }
 
 .card.text-center h3 {
-    margin: 8px 0 6px;   /* non schiacciato sul ruolo */
+    margin: 8px 0 6px;
     line-height: 1.25;
 }
 
 .card.text-center .card-content p {
-    max-width: 60ch;       /* larghezza ottimale per lettura */
+    max-width: 60ch;
     margin-left: auto;
-    margin-right: auto;     /* centra il testo nella card */
-    line-height: 1.7;       /* + leggibilità */
-    letter-spacing: 0.005em;/* micro-tracking per corpi piccoli */
+    margin-right: auto;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
 }
-
-/* separatore delicato tra immagine e contenuto */
 
 .card.text-center .card-header + .card-content {
     border-top: 1px solid var(--border);
 }
-
 
 /* =========================
    TEAM CARD IMAGE (quadrata)
    ========================= */
 .card.text-center .card-header img {
     width: 100%;
-    aspect-ratio: 1 / 1;     /* rende l'immagine perfettamente quadrata */
-    object-fit: cover;        /* ritaglio proporzionato */
-    border-radius: 0;         /* nessun arrotondamento sul bordo superiore */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 0;
     transition: transform 0.3s ease;
 }
 
 .card.text-center:hover .card-header img {
-    transform: scale(1.05);   /* effetto leggero al passaggio del mouse */
+    transform: scale(1.05);
 }
 
 /* =========================
-   TEAM CARD IMAGE (quadrata su tablet/desktop)
+   TEAM CARD IMAGE (quadrata)
    ========================= */
 @media (min-width: 768px) {
   .card.text-center .card-header img {
-    height: auto;           /* override dell'altezza fissa globale */
-    aspect-ratio: 1 / 1;    /* rende l'immagine quadrata */
-    object-fit: cover;      /* ritaglio proporzionato */
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
   }
 
-  /* Effetto hover più delicato per i ritratti del team */
   .card.text-center:hover .card-header img {
-    transform: scale(1.05); /* override rispetto alla regola generica */
+    transform: scale(1.05);
   }
 }
 
@@ -839,7 +829,6 @@ a.card {
     margin: 0 auto 2rem;
 }
 
-/* Pulsante Torna al blog */
 .back-to-blog {
     display: inline-block;
     margin-bottom: 1rem;
@@ -850,13 +839,13 @@ a.card {
     font-weight: 500;
     transition: all 0.3s ease;
 }
+
 .back-to-blog:hover {
     color: var(--primary);
     border-color: var(--primary);
     background: rgba(37, 99, 235, 0.05);
 }
 
-/* Allinea a sinistra anche se l’header è centrato */
 .article-header.text-center .back-to-blog {
     display: inline-flex;
     align-items: center;
@@ -871,11 +860,17 @@ a.card {
     position: relative;
 }
 
-/* Centra l'header dell'articolo e ottimizza il lead */
-.article-header.text-center { text-align: center; }
-.article-header .lead { max-width: 60ch; margin-left: auto; margin-right: auto; color: var(--text-secondary); }
+.article-header.text-center {
+    text-align: center;
+}
 
-/* Titolo articolo: grande, azzurro, senza effetto gradiente */
+.article-header .lead {
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-secondary);
+}
+
 .article-title {
     font-weight: 800;
     line-height: 1.1;
@@ -885,10 +880,10 @@ a.card {
     margin-bottom: 1rem;
 }
 
-/* Breadcrumb e meta */
 .breadcrumb {
     color: var(--text-secondary);
 }
+
 .breadcrumb a {
     color: var(--primary);
 }
@@ -897,7 +892,6 @@ a.card {
     color: var(--text-secondary);
 }
 
-/* Immagine di copertina dell'articolo */
 .article-image {
     width: 100%;
     height: auto;
@@ -905,56 +899,137 @@ a.card {
     border-radius: 16px;
     box-shadow: var(--shadow-md);
     margin-top: 1rem;
-    max-height: 320px; /* riduce l’altezza per vedere più testo */
-    object-fit: cover; /* mantiene proporzioni */
+    max-height: 320px;
+    object-fit: cover;
 }
 
-/* Corpo dell'articolo: larghezza di lettura ottimale */
 .article-content {
     max-width: 72ch;
     margin: 0 auto;
     padding-top: 0.5rem;
 }
-.article-content ul { list-style: disc; }
-.article-content ol { list-style: decimal; }
-.article-content li { margin: 0.35rem 0; }
-.article-content h2 + p { margin-top: 0.5rem; }
 
-/* Spaziatura verticale uniforme tra i blocchi */
-.article-content > * + * { margin-top: 1rem; }
-.article-content h2 { margin-top: 2rem; font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2rem); }
-.article-content h3 { margin-top: 1.25rem; font-size: clamp(1.125rem, 1rem + 0.6vw, 1.35rem); }
-.article-content p  { line-height: 1.8; color: var(--text-primary); }
+.article-content ul {
+    list-style: disc;
+}
 
-/* Liste più leggibili */
-.article-content ul { padding-left: 1.25rem; margin-top: 0.5rem; }
-.article-content ul li { margin: 0.35rem 0; }
-.article-content ol { padding-left: 1.25rem; margin-top: 0.5rem; }
-.article-content ol li { margin: 0.35rem 0; }
+.article-content ol {
+    list-style: decimal;
+}
 
-/* Tabelle coerenti con il tema (override di eventuali inline) */
-.article-content table { width: 100% !important; border-collapse: collapse !important; margin: 1.25rem 0 !important; box-shadow: var(--shadow-sm); border-radius: 12px; overflow: hidden; }
-.article-content th, .article-content td { padding: 0.85rem !important; border: 1px solid var(--border) !important; text-align: left; }
-.article-content tr:nth-child(even) { background: #f8fafc; }
+.article-content li {
+    margin: 0.35rem 0;
+}
 
-/* Tabelle responsive */
-.article-content table { display: table; width: 100% !important; }
-.article-content table thead th { background: #f8fafc; }
-.article-content .table-wrap { overflow-x: auto; }
+.article-content h2 + p {
+    margin-top: 0.5rem;
+}
 
-/* Box CTA nell'articolo */
-.article-cta { border: 1px solid var(--border); border-radius: 16px; background: var(--bg-alternate); box-shadow: var(--shadow-sm); }
-.article-cta h3 { margin-top: 0; margin-bottom: 0.5rem; }
-.article-cta p  { margin: 0 0 1rem; }
+.article-content > * + * {
+    margin-top: 1rem;
+}
 
-/* Utility minime usate nel markup dell'articolo */
-.rounded { border-radius: 12px; }
-.p-6 { padding: 1.5rem; }
-.bg-alternate { background: var(--bg-alternate); }
-.max-w-4xl { max-width: 56rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.mb-6 { margin-bottom: 1.5rem; }
-.mb-8 { margin-bottom: 2rem; }
+.article-content h2 {
+    margin-top: 2rem;
+    font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2rem);
+}
+
+.article-content h3 {
+    margin-top: 1.25rem;
+    font-size: clamp(1.125rem, 1rem + 0.6vw, 1.35rem);
+}
+
+.article-content p  {
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.article-content ul {
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.article-content ul li {
+    margin: 0.35rem 0;
+}
+
+.article-content ol {
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.article-content ol li {
+    margin: 0.35rem 0;
+}
+
+.article-content table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 1.25rem 0 !important;
+    box-shadow: var(--shadow-sm);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.article-content th, .article-content td {
+    padding: 0.85rem !important;
+    border: 1px solid var(--border) !important;
+    text-align: left;
+}
+
+.article-content tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.article-content table {
+    display: table;
+    width: 100% !important;
+}
+
+.article-content table thead th {
+    background: #f8fafc;
+}
+
+.article-content .table-wrap {
+    overflow-x: auto;
+}
+
+.article-cta {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--bg-alternate);
+    box-shadow: var(--shadow-sm);
+}
+.article-cta h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.article-cta p  {
+    margin: 0 0 1rem;
+}
+
+.rounded {
+    border-radius: 12px;
+}
+.p-6 {
+    padding: 1.5rem;
+}
+.bg-alternate {
+    background: var(--bg-alternate);
+}
+.max-w-4xl {
+    max-width: 56rem;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+.mb-8 {
+    margin-bottom: 2rem;
+}
 
 /* =========================
    SERVICE CARDS
@@ -1589,7 +1664,7 @@ a.card {
     }
 }
 
-/* Animazione staggered per i campi del form */
+/* Animazione per i campi del form */
 .form-group {
     animation: slideInUp 0.6s ease forwards;
     opacity: 0;
@@ -1805,7 +1880,7 @@ a.card {
 }
 
 /* =========================
-   FAQ SECTION (CSS PURO)
+   FAQ SECTION
    ========================= */
 .faq-container {
     max-width: 800px;
@@ -1971,14 +2046,13 @@ a.card {
     }
 }
 
-/* FAQ (details/summary, senza JavaScript) - override e integrazione */
+/* FAQ  (ottimizzazioni) */
 .faq-container summary {
     list-style: none;
 }
 .faq-container summary::-webkit-details-marker {
     display: none;
 }
-/* Mantiene lo stile del summary e applica il padding richiesto */
 .faq-container summary.faq-question {
     display: flex;
     align-items: center;
@@ -1988,7 +2062,6 @@ a.card {
     padding: 0.75rem 1.5rem;
     cursor: pointer;
 }
-/* Icona più grande e animata */
 .faq-container .faq-icon {
     width: 24px;
     height: 24px;
@@ -1998,7 +2071,6 @@ a.card {
     transform: rotate(180deg);
 }
 
-/* Stato chiuso: nasconde la risposta e rimuove sfondo */
 .faq-container details > .faq-answer {
     display: none;
     margin-top: 0.5rem;
@@ -2012,7 +2084,6 @@ a.card {
     transition: max-height 0.25s ease, opacity 0.2s ease;
 }
 
-/* Stato aperto: mostra la risposta, senza sfondo grigio */
 .faq-container details[open] > .faq-answer {
     display: block !important;
     max-height: 100vh !important;
