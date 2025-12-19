@@ -34,6 +34,9 @@ Il sito è composto dalle seguenti pagine:
 - **Clean-CSS & PurgeCSS**: Per la minificazione e l'ottimizzazione del codice CSS finale.
 - **HTML-Minifier**: Per ridurre le dimensioni dei file HTML in produzione.
 
+### Script in Javascript
+- Gli script per minimizzare html e ottimizzare le immagini gli ho generati tramite prompt con un sistema di intelligenza artificiale.
+
 ## Gestione Immagini e Icone
 
 - **Icone**: Favicon generata con [RealFaviconGenerator](https://realfavicongenerator.net/). Icone SVG progettate per essere accessibili e leggere.
