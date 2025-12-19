@@ -1,8 +1,6 @@
 {
-  "name": "my-project",
+  "name": "novamnind",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "live-server src",
     "clean": "del-cli dist",
@@ -13,9 +11,6 @@
     "build": "npm run clean && npm run copy:html && npm run minify:html && npm run minify:css",
     "start": "node -e \"console.log('Cache bust:', Date.now())\" && http-server dist -c31536000"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "clean-css-cli": "^5.6.3",
     "cpx": "^1.2.1",
